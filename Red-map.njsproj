@@ -30,9 +30,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="public\BGR.geo.json" />
+    <Content Include="public\CSS\index.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\FrontEndJS\CreateMap.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\icon.ico" />
     <Content Include="public\index.html" />
     <Content Include="server.js" />
     <Content Include="package.json" />
@@ -41,6 +45,7 @@
   <ItemGroup>
     <Folder Include="public\" />
     <Folder Include="public\FrontEndJS\" />
+    <Folder Include="public\CSS\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

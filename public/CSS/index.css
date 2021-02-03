@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+#map {
+    height:inherit;
+    width:100%;
+    
+}
+.navbar-brand{
+    color:red;
+}
+
+#sidebar {
+    background-color: red;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.nav-wrapper{
+    height:auto;
+}
+
+.nav-item{
+    background-color:darkblue;
+    color:red !important;
+}
+
+@media (min-width: 992px) {
+    .navbar li {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
