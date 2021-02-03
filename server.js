@@ -1,7 +1,7 @@
 var http = require('http');
 const express = require('express');
 const app = express();
-const port = env.app.port|| 3030;
+const port = process.env.PORT|| 3030;
 app.get('/', (req, res) => {
     res.sendfile('public/index.html')
     
