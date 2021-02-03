@@ -29,9 +29,18 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="public\BGR.geo.json" />
+    <Content Include="public\FrontEndJS\CreateMap.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\index.html" />
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\FrontEndJS\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
