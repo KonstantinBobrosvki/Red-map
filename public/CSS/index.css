@@ -6,7 +6,7 @@ html, body {
 #map {
     height:inherit;
     width:100%;
-    
+    z-index:100;
 }
 .navbar-brand{
     color:red;
@@ -38,4 +38,25 @@ html, body {
         margin-left: 1em;
         margin-right: 1em;
     }
+}
+
+#select-bar :hover {
+    width: auto !important;
+    z-index: 1000 !important;
+    position: relative !important;
+    position: absolute;
+}
+
+.select-bar-option :hover {
+    width: auto !important;
+    z-index: 1000 !important;
+    position: relative !important;
+    position: absolute;
+}
+
+#sidebar-wrapper :hover {
+    width: auto !important;
+    z-index: 1000 !important;
+    position: relative !important;
+    position: absolute;
 }

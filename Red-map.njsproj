@@ -36,6 +36,9 @@
     <Content Include="public\FrontEndJS\CreateMap.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\FrontEndJS\OptionsMenu.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\icon.ico" />
     <Content Include="public\index.html" />
     <Content Include="server.js" />
