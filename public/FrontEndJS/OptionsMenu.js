@@ -55,3 +55,30 @@ function Select_bar_change(){
     });
 
 }
+
+setInterval(ReloadImages, 100);
+
+function ReloadImages() {
+    
+    $.each($(".leaflet-marker-icon"), function () {
+        var img = this;
+
+        var updtimes = parseInt($(this).attr("updatetimes"));
+        
+        if (!$(this).attr("updatetimes"))
+        {
+            updtimes = 0;
+           
+        }
+       
+        if (updtimes < 10) {
+            var src = $(this).attr('src');
+            $(img).attr("updatetimes", updtimes + 1);
+            
+            $(img).attr("src", src);
+        }
+
+       
+        
+    })
+}
