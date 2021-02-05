@@ -1,6 +1,8 @@
+let plants;
+
 jQuery.get('/plants.json', function (data) {
     let jsonObject = data;
-
+    plants = data;
     var sel = document.getElementById('select-bar');
     for (var i = 0; i < jsonObject.length; i++) {
         var itemName = jsonObject[i].BulgarinaName;
@@ -32,10 +34,13 @@ function Select_bar_change(){
 
     
     $.each($("#select-bar option:selected"), function () {
-        
+
+        var img_path = "http://e-ecodb.bas.bg/rdb/drawings/vol1/" + plants[$(this).val()].Link.replace(".html#map",".jpg");
+
+        console.log(img_path);
        
         var greenIcon = L.icon({
-            iconUrl: 'http://e-ecodb.bas.bg/rdb/drawings/vol1/Lilalban.jpg',
+            iconUrl: img_path,
             
 
             iconSize: [38, 95], // size of the icon
