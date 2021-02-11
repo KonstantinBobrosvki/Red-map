@@ -44,11 +44,20 @@
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="views\index.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\partials\header.hbs">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataBases\" />
+    <Folder Include="views\" />
     <Folder Include="public\" />
     <Folder Include="public\FrontEndJS\" />
     <Folder Include="public\CSS\" />
+    <Folder Include="views\partials\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
