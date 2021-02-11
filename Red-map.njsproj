@@ -40,7 +40,6 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\icon.ico" />
-    <Content Include="public\index.html" />
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
