@@ -29,6 +29,12 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="controllers\index.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="LocalSecretConfigs\DBConfings.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\BGR.geo.json" />
     <Content Include="public\CSS\index.css">
       <SubType>Code</SubType>
@@ -51,7 +57,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataBases\" />
+    <Folder Include="controllers\" />
+    <Folder Include="LocalSecretConfigs\" />
     <Folder Include="views\" />
     <Folder Include="public\" />
     <Folder Include="public\FrontEndJS\" />

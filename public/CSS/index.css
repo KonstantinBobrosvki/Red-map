@@ -11,6 +11,9 @@ html, body {
 .navbar-brand{
     color:red;
 }
+.navbar{
+    margin-top:0;
+}
 
 #sidebar {
     background-color: red;
