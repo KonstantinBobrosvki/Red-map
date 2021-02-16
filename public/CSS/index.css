@@ -1,8 +1,14 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 0px;
+    overflow-x: hidden;
 }
+
+.container.main-wrapper {
+    max-width: 100% !important;
+}
+
 #map {
     height:inherit;
     width:100%;
@@ -11,8 +17,15 @@ html, body {
 .navbar-brand{
     color:red;
 }
-.navbar{
-    margin-top:0;
+.navbar {
+   
+    position:relative;
+
+}
+
+nav {
+    margin-top: -25px;
+    padding-top: 0;
 }
 
 #sidebar {
@@ -32,8 +45,7 @@ html, body {
 }
 
 .nav-item{
-    background-color:darkblue;
-    color:red !important;
+
 }
 
 @media (min-width: 992px) {

@@ -35,7 +35,6 @@
     <Content Include="LocalSecretConfigs\DBConfings.json">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="public\BGR.geo.json" />
     <Content Include="public\CSS\index.css">
       <SubType>Code</SubType>
     </Content>
