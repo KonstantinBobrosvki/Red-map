@@ -13,15 +13,19 @@ const fs = require('fs');
 
     client.connect()
 
-    client.query('SELECT * FROM plants Where "BulgarianName" IS NOT NULL', (err, res) => {
+     client.query('SELECT * FROM plants Where "BulgarianName" IS NOT NULL', (err, res) => {
         if (err) throw err;
         for (let row of res.rows) {
             console.log(JSON.stringify(row));
-        }
+         }
+         response.render("index.hbs",
+             {
+                 types: res.rows
+             });
         client.end();
     });
 
-    response.render("index.hbs");
+   
 }
 
 module.exports = {

@@ -22,6 +22,9 @@
             <div class="bg-light border-right col-lg-1 col-md-12 col-sm-12" id="sidebar-wrapper">
                 <div class="sidebar-heading">Намери вид </div>
                 <select class="form-select" multiple id="select-bar" onchange="Select_bar_change()">
+                    {{#each types}}
+                    <option class="select-bar-option" value="{{this.ID}}">{{this.BulgarianName}}</option>
+                    {{/each}}
                 </select>
             </div>
 
