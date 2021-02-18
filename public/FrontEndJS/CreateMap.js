@@ -1,5 +1,3 @@
-
-
 var map = L.map("map").setView([42.6237, 25.3961], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -10,10 +8,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1Ijoia29rb2RxbmtvdiIsImEiOiJja2tvZTB0ZGUybDBwMnZxdGJoN3ZremlrIn0.uwZ7_9LoBPCmeakn1JxkSA'
 }).addTo(map);
 
-//jQuery.get('/BGR.geo.json', function (data) {
- 
-//    L.geoJSON(data).addTo(map);
-//});
 
 
 

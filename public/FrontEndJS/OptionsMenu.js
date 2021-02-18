@@ -1,25 +1,9 @@
 
 function Select_bar_change() {
     $.each($("#select-bar option:selected"), function () {
-
-       // "A:\C# projects\Red-map\public\img\Agabohus.jpg"+
-        const id = $(this).val();
-        
-        const response = fetch("./api/imageURLbyid:" + id, {
-            method: "GET",
-            headers: { "Accept": "application/json" }
-        });
-      
-        var sel = $(this);
-
-        $.ajax({
-            url: "./api/imageURLbyid:" + id,
-            contentType: "application/json",
-            dataType: 'json',
-            success: function (result) {
-                const url = result.URL;
-                
-                const img_path = "./img/" + url.replace(".html#map", ".jpg");
+     
+        const url = $(this).val();       
+        const img_path = "./img/" + url.replace(".html#map", ".jpg");
               
 
                 var greenIcon = L.icon({
@@ -34,14 +18,8 @@ function Select_bar_change() {
                 });
 
 
-                L.marker([42.6237 + Math.random(), 25.3961 + Math.random()], { icon: greenIcon }).addTo(map).bindPopup("<b> " + sel.text() + " </b> <br> " + $("#sone").text() + " .").openPopup();
-            }
-        })
-
-            
-
-        
-        
+                L.marker([42.6237 + Math.random(), 25.3961 + Math.random()], { icon: greenIcon }).addTo(map).bindPopup("<b> " + $(this).text() + " </b> <br> " + $("#sone").text() + " .").openPopup();
+  
     });
 }
  
