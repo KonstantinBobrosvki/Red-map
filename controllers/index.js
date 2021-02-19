@@ -1,8 +1,7 @@
 const { Client } = require('pg');
 const fs = require('fs');
- function CreateIndex(request, response) {
 
-    console.log("HERE");
+ function CreateIndex(request, response) {
 
     const client = new Client({
         connectionString: process.env.DATABASE_URL || JSON.parse(fs.readFileSync("./LocalSecretConfigs/DBConfings.json")).connection_string,

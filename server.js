@@ -6,9 +6,6 @@ const APIRouter = require(__dirname + '/API/APIRouter.js');
 const app = express();
 const port = process.env.PORT || 3030;
 
-console.log(process.env.DATABASE_URL);
-
-
 app.use(express.static('public'));
 
 app.set("view engine", "hbs");

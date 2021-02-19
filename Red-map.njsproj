@@ -32,9 +32,6 @@
     <Content Include="API\APIRouter.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="API\imageURLByid.js">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="controllers\index.js">
       <SubType>Code</SubType>
     </Content>
