@@ -1,0 +1,23 @@
+.navbar-brand {
+    color: red;
+}
+
+.navbar {
+    position: relative;
+}
+
+nav {
+    margin-top: -25px;
+    padding-top: 0;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.nav-wrapper {
+    height: auto;
+}
+
+.nav-item {
+}

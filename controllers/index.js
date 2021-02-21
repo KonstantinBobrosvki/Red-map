@@ -10,10 +10,7 @@ const fs = require('fs');
         }
     });
 
-     client.connect()
-
-
-    
+     client.connect()   
 
      client.query('SELECT * FROM plants', (err, res) => {
         if (err) throw err;

@@ -850,6 +850,9 @@
     <Content Include="public\CSS\index.css">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\CSS\navbar.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\FrontEndJS\CreateMap.js">
       <SubType>Code</SubType>
     </Content>
