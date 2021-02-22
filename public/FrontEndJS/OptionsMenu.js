@@ -66,7 +66,7 @@ function addPlantsToMap(sender) {
 
                 var marker = L.marker([cordinate.latitude, cordinate.longitude], { icon: greenIcon });
                 markersDictionary[id].push(marker);
-                marker.addTo(map);//.bindPopup("<b> " + option_select.text() + " </b> <br> Тук съм.", { autoClose: false }).openPopup();
+                marker.addTo(map).bindPopup("<b> " + option_select.text() + " </b> <br> Тук съм.", { autoClose: false });//.openPopup();
             });
         },
         error: function () {

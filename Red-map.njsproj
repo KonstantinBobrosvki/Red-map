@@ -36,6 +36,9 @@
     <Content Include="controllers\index.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="controllers\plantsList.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Data\places\Acaspino.txt" />
     <Content Include="Data\places\Aceheldr.txt" />
     <Content Include="Data\places\Achchrys.txt" />
@@ -851,6 +854,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\CSS\navbar.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\CSS\plantsList.css">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\FrontEndJS\CreateMap.js">
@@ -1675,6 +1681,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\partials\header.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\plantsList.hbs">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>
