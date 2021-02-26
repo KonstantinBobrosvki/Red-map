@@ -872,7 +872,7 @@
     <Content Include="public\FrontEndJS\PlantsListFrontEnd.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="public\icon.ico" />
+    <Content Include="public\icon.png" />
     <Content Include="public\img\Acaspino.jpg" />
     <Content Include="public\img\Aceheldr.jpg" />
     <Content Include="public\img\Achchrys.jpg" />
@@ -1687,7 +1687,10 @@
     <Content Include="views\index.hbs">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="views\partials\header.hbs">
+    <Content Include="views\partials\navbar.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\partials\headTags.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\plantsList.hbs">

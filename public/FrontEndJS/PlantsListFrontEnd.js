@@ -1,10 +1,10 @@
 ﻿var maxid = 0;
-const loadCardsMax = 20;
+const loadCardsMax = 12;
 
 $(document).ready(function () {
     for (var i = 0; i < loadCardsMax; i++) {
         var info = LoadNewPlant(maxid, CreateAndAddCard);
-      console.log(maxid)
+     
         maxid = maxid + 1;
     }
     
@@ -12,13 +12,16 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
 
-    if ($(document).height() - $(this).height() == $(this).scrollTop()) {
+    if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+        
         for (var i = 0; i < loadCardsMax; i++) {
             if (maxid <= 807) {
                 var info = LoadNewPlant(maxid, CreateAndAddCard);
                 maxid = maxid + 1;
+                
             }
         }
+       
     }
 
 });
@@ -67,6 +70,10 @@ function NormalizeAPIData(obj) {
 
     if (obj.morphology[0] == " " || obj.morphology[0] == ".") {
         obj.morphology = obj.morphology.substring(1);
-        return obj;
+       
     }
+    if (obj.morphology.length > 400) {
+        obj.morphology= obj.morphology.substring(0, 397).concat(" ... ");
+    }
+    return obj;
 }
