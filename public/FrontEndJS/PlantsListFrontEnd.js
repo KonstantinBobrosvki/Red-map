@@ -13,13 +13,23 @@ $(document).ready(function () {
 $(window).scroll(function () {
 
     if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
-        
-        for (var i = 0; i < loadCardsMax; i++) {
+
+        if (maxid <= 807) {
+
+             $.LoadingOverlay("show");
+             setTimeout(function () {
+                 $.LoadingOverlay("hide");
+             }, 1500);
+
+        }
+        for (var i = 0; i < loadCardsMax ; i++) {
+
             if (maxid <= 807) {
                 var info = LoadNewPlant(maxid, CreateAndAddCard);
                 maxid = maxid + 1;
-                
             }
+                
+            
         }
        
     }
