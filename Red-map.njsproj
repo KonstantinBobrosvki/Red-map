@@ -33,6 +33,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="API\getCordinatesbyID.js" />
+    <Content Include="API\GetPlantInfobyID.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="controllers\index.js">
       <SubType>Code</SubType>
     </Content>
@@ -847,6 +850,7 @@
     <Content Include="Data\places\Viostoja.txt" />
     <Content Include="Data\places\Vulunila.txt" />
     <Content Include="Data\places\Zosmarin.txt" />
+    <Content Include="LocalSecretConfigs\Alg.txt" />
     <Content Include="LocalSecretConfigs\DBConfings.json">
       <SubType>Code</SubType>
     </Content>
@@ -863,6 +867,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\FrontEndJS\OptionsMenu.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\FrontEndJS\PlantsListFrontEnd.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\icon.ico" />

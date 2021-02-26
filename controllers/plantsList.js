@@ -14,6 +14,7 @@ function CreatePlantsList(request, response) {
 
     client.query('SELECT * FROM plants', (err, res) => {
         if (err) throw err;
+        
         response.render("plantsList.hbs",
             {
                 types: res.rows
