@@ -1,5 +1,6 @@
 ﻿var maxid = 0;
 const loadCardsMax = 12;
+var loading = false;
 
 $(document).ready(function () {
     for (var i = 0; i < loadCardsMax; i++) {
@@ -12,26 +13,29 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
 
-    if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
-
-        if (maxid <= 807) {
-
-             $.LoadingOverlay("show");
-             setTimeout(function () {
-                 $.LoadingOverlay("hide");
-             }, 1500);
-
-        }
-        for (var i = 0; i < loadCardsMax ; i++) {
-
+    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 300) {
+        if (!loading) {
+            loading = true;
+            console.log("loading");
             if (maxid <= 807) {
-                var info = LoadNewPlant(maxid, CreateAndAddCard);
-                maxid = maxid + 1;
+
+                $.LoadingOverlay("show");
+                setTimeout(function () {
+                    loading = false;
+                    $.LoadingOverlay("hide");
+                }, 1500);
+
             }
-                
-            
+            for (var i = 0; i < loadCardsMax; i++) {
+
+                if (maxid <= 807) {
+                    var info = LoadNewPlant(maxid, CreateAndAddCard);
+                    maxid = maxid + 1;
+                }
+
+
+            }
         }
-       
     }
 
 });
