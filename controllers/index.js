@@ -10,13 +10,16 @@ const fs = require('fs');
         }
     });
 
-     client.connect()   
+     client.connect();
+
+     var head = fs.readFileSync('./views/partials/SpecifyHeadTags/indexHeadTags.hbs');
 
      client.query('SELECT * FROM plants', (err, res) => {
         if (err) throw err;
-         response.render("index.hbs",
+         response.render("index",
              {
-                 types: res.rows
+                 types: res.rows,
+                 pageHeadTags:head
              });
         client.end();
     });

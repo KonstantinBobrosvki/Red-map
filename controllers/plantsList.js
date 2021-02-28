@@ -12,12 +12,15 @@ function CreatePlantsList(request, response) {
 
     client.connect()
 
+    var head = fs.readFileSync('./views/partials/SpecifyHeadTags/plantsListHeadTags.hbs');
+
     client.query('SELECT * FROM plants', (err, res) => {
         if (err) throw err;
         
-        response.render("plantsList.hbs",
+        response.render("plantsList",
             {
-                types: res.rows
+                types: res.rows,
+                pageHeadTags: head
             });
         client.end();
     });

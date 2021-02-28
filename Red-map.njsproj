@@ -1687,10 +1687,19 @@
     <Content Include="views\index.hbs">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\layouts\layout.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\partials\navbar.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\partials\headTags.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\partials\SpecifyHeadTags\indexHeadTags.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\partials\SpecifyHeadTags\plantsListHeadTags.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\plantsList.hbs">
@@ -1708,7 +1717,9 @@
     <Folder Include="public\" />
     <Folder Include="public\FrontEndJS\" />
     <Folder Include="public\CSS\" />
+    <Folder Include="views\layouts\" />
     <Folder Include="views\partials\" />
+    <Folder Include="views\partials\SpecifyHeadTags\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

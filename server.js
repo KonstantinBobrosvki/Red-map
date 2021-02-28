@@ -1,5 +1,7 @@
 const express = require('express');
 const hbs = require("hbs");
+const expressHbs = require("express-handlebars");
+
 const plantsList = require(__dirname + '/controllers/plantsList.js');
 const index = require(__dirname + '/controllers/index.js');
 const APIRouter = require(__dirname + '/API/APIRouter.js');
@@ -10,8 +12,18 @@ const port = process.env.PORT || 3030;
 app.use(express.static('public'));
 
 app.set("view engine", "hbs");
-app.set("views", __dirname+"/views");
-hbs.registerPartials(__dirname + "/views/partials");
+
+app.set("views", __dirname+"/views/");
+hbs.registerPartials(__dirname + "/views/partials/");
+
+app.engine("hbs", expressHbs(
+    {
+        layoutsDir: "views/layouts",
+        defaultLayout: "layout",
+        extname: "hbs"
+    }
+))
+
 hbs.registerHelper("contact", function (s1,s2) {
     return s1.concat(s2);
 });
