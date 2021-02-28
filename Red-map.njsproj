@@ -1694,6 +1694,9 @@
     <Content Include="views\layouts\layout.hbs">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\partials\footer.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\partials\navbar.hbs">
       <SubType>Code</SubType>
     </Content>
