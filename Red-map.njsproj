@@ -39,6 +39,7 @@
     <Content Include="controllers\index.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="controllers\plantPage.js" />
     <Content Include="controllers\plantsList.js">
       <SubType>Code</SubType>
     </Content>
@@ -858,6 +859,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\CSS\navbar.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\CSS\plantPage.css">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\CSS\plantsList.css">
@@ -1699,7 +1703,13 @@
     <Content Include="views\partials\SpecifyHeadTags\indexHeadTags.hbs">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\partials\SpecifyHeadTags\plantPageHeadTags.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\partials\SpecifyHeadTags\plantsListHeadTags.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\plantPage.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\plantsList.hbs">

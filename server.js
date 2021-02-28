@@ -4,6 +4,7 @@ const expressHbs = require("express-handlebars");
 
 const plantsList = require(__dirname + '/controllers/plantsList.js');
 const index = require(__dirname + '/controllers/index.js');
+const plantPage = require(__dirname + '/controllers/plantPage.js');
 const APIRouter = require(__dirname + '/API/APIRouter.js');
 
 const app = express();
@@ -42,6 +43,10 @@ try {
 
     app.get("/plants", function (req, res) {
         plantsList.CreatePlantsList(req, res)
+    });
+
+    app.get("/plant/:id", function (req, res) {
+        plantPage.CreatePlantPage(req, res)
     });
 
 

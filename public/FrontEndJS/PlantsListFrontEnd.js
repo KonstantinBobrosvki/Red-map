@@ -16,7 +16,7 @@ $(window).scroll(function () {
     if ($(window).scrollTop() + $(window).height() >= $(document).height() - 300) {
         if (!loading) {
             loading = true;
-            console.log("loading");
+            
             if (maxid <= 807) {
 
                 $.LoadingOverlay("show");
@@ -71,7 +71,7 @@ function CreateAndAddCard(info) {
                                 '<div class="card-body">',
                                     '<h5 class="card-title">', info.LatinName ,'</h5>',
                                     '<p class="card-text"> ', info.morphology ,'</p>',
-                                    '<a href="#" class="btn btn-primary">Go somewhere</a>',
+                                    '<a href="/plant/',info.id ,'" class="btn btn-primary">Повече информация</a>',
                                 '</div>',
                       '</div >',
         '</div >');
