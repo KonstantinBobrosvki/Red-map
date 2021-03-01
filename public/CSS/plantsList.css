@@ -3,8 +3,6 @@ html, body {
     padding: 0px;
     overflow-x: hidden;
 }
-
-#secondary-heading
-{
-
+.card-img-top {
+    max-height: 800px;
 }

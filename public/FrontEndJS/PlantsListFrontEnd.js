@@ -57,13 +57,13 @@ function LoadNewPlant(id, callback) {
 
         },
         error: function () {
-            console.log(id);
-            alert("Извенете в момента не можем да ви дадем информация за това растение");
+          //  alert("Извенете в момента не можем да ви дадем информация за това растение");
         }
     });
 }
 
 function CreateAndAddCard(info) {
+    info = NormalizeData(info);
     var template ="".concat('<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-3">',
                       '<div class="card" >',
                             '<img class="card-img-top img-thumbnail" src="/img/',info.URL.replace(".html#map",".jpg") ,'" alt="Card image cap" >',
@@ -77,4 +77,11 @@ function CreateAndAddCard(info) {
     
     $("#allCards").append(template);
     return template;
+}
+
+function NormalizeData(obj) {
+    if (obj.morphology.length  > 400) {
+        obj.morphology = obj.morphology.substring(0, 397) + "...";
+    }
+    return obj;
 }
