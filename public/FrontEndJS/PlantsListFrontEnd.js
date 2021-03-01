@@ -50,21 +50,20 @@ function LoadNewPlant(id, callback) {
         contentType: "application/json",
         dataType: 'json',
         success: function (respone) {
-            var result = respone[0];
+            var result = respone;
            
             return callback(result);
            
 
         },
         error: function () {
+            console.log(id);
             alert("Извенете в момента не можем да ви дадем информация за това растение");
         }
     });
 }
 
 function CreateAndAddCard(info) {
-
-    info = NormalizeAPIData(info);
     var template ="".concat('<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-3">',
                       '<div class="card" >',
                             '<img class="card-img-top img-thumbnail" src="/img/',info.URL.replace(".html#map",".jpg") ,'" alt="Card image cap" >',
@@ -74,20 +73,8 @@ function CreateAndAddCard(info) {
                                     '<a href="/plant/',info.id ,'" class="btn btn-primary">Повече информация</a>',
                                 '</div>',
                       '</div >',
-        '</div >');
+        '</div>');
     
     $("#allCards").append(template);
     return template;
-}
-
-function NormalizeAPIData(obj) {
-
-    if (obj.morphology[0] == " " || obj.morphology[0] == ".") {
-        obj.morphology = obj.morphology.substring(1);
-       
-    }
-    if (obj.morphology.length > 400) {
-        obj.morphology= obj.morphology.substring(0, 397).concat(" ... ");
-    }
-    return obj;
 }

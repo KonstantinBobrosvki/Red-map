@@ -1,30 +1,24 @@
-const { Client } = require('pg');
 const fs = require('fs');
+const PlantsDB = require('../Data/PlantsDB.js');
 
  function CreateIndex(request, response) {
 
-    const client = new Client({
-        connectionString: process.env.DATABASE_URL || JSON.parse(fs.readFileSync("./LocalSecretConfigs/DBConfings.json")).connection_string,
-        ssl: {
-            rejectUnauthorized: false
-        }
-    });
-
-     client.connect();
-
      var head = fs.readFileSync('./views/partials/SpecifyHeadTags/indexHeadTags.hbs');
 
-     client.query('SELECT * FROM plants', (err, res) => {
-        if (err) throw err;
+     PlantsDB.GetPlants((result) => {
+
+         if (result == null) {
+             response.status(404).send();
+             return;
+         }
+
          response.render("index",
              {
-                 types: res.rows,
-                 pageHeadTags:head
+                 types: result,
+                 pageHeadTags: head
              });
-        client.end();
-    });
+     });
 
-   
 }
 
 module.exports = {
