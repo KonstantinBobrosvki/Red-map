@@ -36,11 +36,17 @@
     <Content Include="API\PlantAPIs.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="controllers\guestbook.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="controllers\index.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="controllers\plantPage.js" />
     <Content Include="controllers\plantsList.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Data\GuestbookDB.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="Data\PlacesDB.js">
@@ -861,6 +867,9 @@
     <Content Include="LocalSecretConfigs\DBConfings.json">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\CSS\guestBook.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\CSS\index.css">
       <SubType>Code</SubType>
     </Content>
@@ -874,6 +883,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\FrontEndJS\CreateMap.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\FrontEndJS\guestbookFrontEnd.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\FrontEndJS\OptionsMenu.js">
@@ -1694,6 +1706,9 @@
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="views\guestbook.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\index.hbs">
       <SubType>Code</SubType>
     </Content>
@@ -1707,6 +1722,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\partials\headTags.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\partials\SpecifyHeadTags\guestBookHeadTags.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\partials\SpecifyHeadTags\indexHeadTags.hbs">

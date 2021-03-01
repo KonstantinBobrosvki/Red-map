@@ -1,14 +1,18 @@
 const express = require('express');
 const hbs = require("hbs");
 const expressHbs = require("express-handlebars");
+const bodyParser = require("body-parser");
+
 
 const plantsList = require(__dirname + '/controllers/plantsList.js');
 const index = require(__dirname + '/controllers/index.js');
 const plantPage = require(__dirname + '/controllers/plantPage.js');
+const guestbook = require(__dirname + '/controllers/guestbook.js');
 const APIRouter = require(__dirname + '/API/APIRouter.js');
 
 const app = express();
 const port = process.env.PORT || 3030;
+var jsonParser = bodyParser.json()
 
 app.use(express.static('public'));
 
@@ -49,7 +53,12 @@ try {
         plantPage.CreatePlantPage(req, res)
     });
 
-
+    app.get("/guestbook", function (req, res) {
+        guestbook.CreateGuestBook(req, res);
+    });
+    app.post("/guestbook", jsonParser, function (req, res) {
+        guestbook.AddLetter(req, res);
+    });
   
     
 } catch (e) {

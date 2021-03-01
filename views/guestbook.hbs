@@ -1,0 +1,32 @@
+﻿<div class="container">
+    <h1>Добре дошли</h1>
+    <p>По-долу може да оставите ваше съобщение, което ще бъде видяно от всички:</p>
+    <form  name="letterForm">
+        <fieldset>
+            <legend>Вашето съобщение</legend>
+            <table>
+                <tr>
+                    <td>Вашето име: </td>
+                    <td><input type="text" name="userName"></td>
+                </tr>
+                <tr>
+                    <td>Съобщение: </td>
+                    <td><input type="text" name="letter"></td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit" class="btn btn-sm btn-primary">Изпрати</button>
+            
+        </fieldset>
+    </form>
+
+    <h3 >Съобщения:</h3>
+    <div id="messages">
+    {{#if allComments}}
+        {{#each allComments}}
+            <p>{{this.username}} : {{this.letter}}</p>
+        {{/each}}
+    {{/if}}
+    </div>
+    <script src="FrontEndJS/guestbookFrontEnd.js"></script>
+</div>

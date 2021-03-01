@@ -32,6 +32,7 @@ function getPlantCordinatesbyID(id, callback) {
             const data = fs.readFileSync(__dirname+"/places/" + url.replace(".html#map", ".txt"), 'utf8');
             var places = data.split(' ');
             var uniqueplaces = places.filter(function (elem, pos) {
+                client.end();
                 return places.indexOf(elem) == pos;
             })
 
@@ -50,16 +51,16 @@ function getPlantCordinatesbyID(id, callback) {
             client.query(query).then((cordinates) => {
 
                 if (cordinates.rows == 0) {
-
+                    client.end();
                     return callback(null)
                 }
                 else {
-
+                    client.end();
                     return callback(cordinates.rows);
                 }
 
 
-                client.end();
+                
             });
         }
     });
