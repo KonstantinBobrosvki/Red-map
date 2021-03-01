@@ -32,7 +32,7 @@ function getPlantCordinatesbyID(id, callback) {
             const data = fs.readFileSync(__dirname+"/places/" + url.replace(".html#map", ".txt"), 'utf8');
             var places = data.split(' ');
             var uniqueplaces = places.filter(function (elem, pos) {
-                client.end();
+               
                 return places.indexOf(elem) == pos;
             })
 
