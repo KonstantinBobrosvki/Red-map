@@ -21,12 +21,15 @@
     </form>
 
     <h3 >Съобщения:</h3>
-    <div id="messages">
-    {{#if allComments}}
+    <div id="messages" class="col-sm-12">
+        {{#if allComments}}
         {{#each allComments}}
-            <p>{{this.username}} : {{this.letter}}</p>
+        <blockquote class="blockquote col-sm-6 bg-info">
+            <p class="mb-0">{{this.letter}}</p>
+            <footer class="blockquote-footer">{{this.username}}</footer>
+        </blockquote>
         {{/each}}
-    {{/if}}
+        {{/if}}
     </div>
     <script src="FrontEndJS/guestbookFrontEnd.js"></script>
 </div>
