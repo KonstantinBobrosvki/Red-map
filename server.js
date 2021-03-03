@@ -9,6 +9,7 @@ const index = require(__dirname + '/controllers/index.js');
 const plantPage = require(__dirname + '/controllers/plantPage.js');
 const guestbook = require(__dirname + '/controllers/guestbook.js');
 const thanks = require(__dirname + '/controllers/thanks.js');
+const APIPage = require(__dirname + '/controllers/APIPage.js');
 const APIRouter = require(__dirname + '/API/APIRouter.js');
 
 const app = express();
@@ -64,7 +65,11 @@ try {
     app.get("/thanks", function (req, res) {
         thanks.CreateThanks(req, res);
     });
-  
+
+    app.get("/APIPage", function (req, res) {
+        APIPage.CreateApiPage(req, res);
+    });
+
     
 } catch (e) {
     console.log(e);

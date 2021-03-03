@@ -36,6 +36,9 @@
     <Content Include="API\PlantAPIs.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="controllers\APIPage.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="controllers\guestbook.js">
       <SubType>Code</SubType>
     </Content>
@@ -1706,6 +1709,9 @@
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="views\APIPage.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\guestbook.hbs">
       <SubType>Code</SubType>
     </Content>
@@ -1722,6 +1728,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\partials\headTags.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\partials\SpecifyHeadTags\apiPageHeadTags.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\partials\SpecifyHeadTags\guestBookHeadTags.hbs">
