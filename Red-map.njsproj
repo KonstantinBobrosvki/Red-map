@@ -1736,10 +1736,19 @@
     <Content Include="views\partials\SpecifyHeadTags\plantsListHeadTags.hbs">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\partials\SpecifyHeadTags\thanksHeadTags.hbs">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\plantPage.hbs">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\plantsList.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\thanks.hbs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\thanks.js">
       <SubType>Code</SubType>
     </Content>
   </ItemGroup>

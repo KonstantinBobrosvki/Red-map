@@ -8,6 +8,7 @@ const plantsList = require(__dirname + '/controllers/plantsList.js');
 const index = require(__dirname + '/controllers/index.js');
 const plantPage = require(__dirname + '/controllers/plantPage.js');
 const guestbook = require(__dirname + '/controllers/guestbook.js');
+const thanks = require(__dirname + '/controllers/thanks.js');
 const APIRouter = require(__dirname + '/API/APIRouter.js');
 
 const app = express();
@@ -58,6 +59,10 @@ try {
     });
     app.post("/guestbook", jsonParser, function (req, res) {
         guestbook.AddLetter(req, res);
+    });
+
+    app.get("/thanks", function (req, res) {
+        thanks.CreateThanks(req, res);
     });
   
     
