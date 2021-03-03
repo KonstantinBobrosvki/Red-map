@@ -34,7 +34,20 @@ function GetPlantInfobyID(request, response) {
 
 }
 
+function GetAllPlants(request, response) {
+    PlantsDB.GetPlants((result) => {
+        if (result == null) {
+            response.status(404).send();
+            return;
+        }
+        else {
+            response.send(result);
+        }
+    });
+}
+
 module.exports = {
     GetPlantbyID,
-    GetPlantInfobyID
+    GetPlantInfobyID,
+    GetAllPlants
 } 

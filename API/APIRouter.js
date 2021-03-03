@@ -13,6 +13,9 @@ APIRouter.use("/getPlantbyID", function (request, response) {
 APIRouter.use("/getPlantInfobyID", function (request, response) {
     PlantAPIs.GetPlantInfobyID(request, response);
 });
+APIRouter.use("/getAllPlants", function (request, response) {
+    PlantAPIs.GetAllPlants(request, response);
+});
 
 
 
