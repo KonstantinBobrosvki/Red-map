@@ -37,7 +37,7 @@ function reset() {
 }
 
 function Add(letter) {
-    var template = "".concat('<blockquote class="blockquote col-sm-6">',
+    var template = "".concat('<blockquote class="blockquote col-sm-6 bg-info">',
         '<p class= "mb-0" >', letter.letter ,'</p >',
         '<footer class="blockquote-footer">', letter.username,'</footer>',
        ' </blockquote >')
