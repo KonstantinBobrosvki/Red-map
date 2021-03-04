@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const GuestbookDB = require('../Data/GuestbookDB.js');
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: true });
@@ -7,7 +7,12 @@ function CreateGuestBook(request, response) {
 
     var head = fs.readFileSync('./views/partials/SpecifyHeadTags/guestBookHeadTags.hbs');
  
-        GuestbookDB.getLetters((result) => {
+    GuestbookDB.getLetters((result) => {
+        head = head + '<meta name = "description" content = "Тук може да оставите своите отзиви и пожелания. :)" >'
+        head = head + '<meta name="keywords" content="Отзив, пожелание, red map, червена книга,">'
+        head = head + '<title>Отзиви</title>'
+                   
+
             response.render("guestbook",
                 {
                     allComments: result,

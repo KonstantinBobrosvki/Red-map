@@ -1,4 +1,4 @@
-
+﻿
 const fs = require('fs');
 const PlantsDB = require('../Data/PlantsDB.js');
 
@@ -11,9 +11,12 @@ function CreatePlantsList(request, response) {
     PlantsDB.GetPlants((result) => {
         if (result == null) {
             response.status(404).send();
-
             return;
         }
+
+        head = head + '<meta name="description" content="Списък растения и гъби, които са застрашени от изчезване">'
+        head = head + '<meta name = "keywords" content = "Видове, застрашени, списък, биология, растения, гъби" >'
+
         response.render("plantsList",
             {
                 types: result,

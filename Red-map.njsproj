@@ -1706,6 +1706,10 @@
     <Content Include="public\img\Viostoja.jpg" />
     <Content Include="public\img\Vulunila.jpg" />
     <Content Include="public\img\Zosmarin.jpg" />
+    <Content Include="public\robots.txt">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\sitemap.xml" />
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
