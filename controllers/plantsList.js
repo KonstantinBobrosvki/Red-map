@@ -16,7 +16,7 @@ function CreatePlantsList(request, response) {
 
         head = head + '<meta name="description" content="Списък растения и гъби, които са застрашени от изчезване">'
         head = head + '<meta name = "keywords" content = "Видове, застрашени, списък, биология, растения, гъби" >'
-
+        head = head + '<title>Списък видове</title>'
         response.render("plantsList",
             {
                 types: result,
