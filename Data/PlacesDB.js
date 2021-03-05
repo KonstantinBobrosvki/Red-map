@@ -25,14 +25,18 @@ function getPlantCordinatesbyID(id, callback) {
     client.query('SELECT "URL" FROM plants WHERE id = $1', [id]).then((result) => {
         if (result.rows == 0) {
            
-            return callback( null);
+            return callback(null);
         }
         else {
             var url = result.rows[0].URL;
-            const data = fs.readFileSync(__dirname+"/places/" + url.replace(".html#map", ".txt"), 'utf8');
+            const data = fs.readFileSync(__dirname + "/places/" + url.replace(".html#map", ".txt"), 'utf8');
             var places = data.split(' ');
+
+            if (places.length < 2) {
+                return callback(null);
+            }
+
             var uniqueplaces = places.filter(function (elem, pos) {
-               
                 return places.indexOf(elem) == pos;
             })
 
@@ -41,15 +45,13 @@ function getPlantCordinatesbyID(id, callback) {
             for (var i = 0; i < uniqueplaces.length - 1; i++) {
                 var ite = uniqueplaces[i];
                 query = query + "%" + ite + "%|";
-
             }
             query = query.slice(0, -1);
             query = query + ")'";
-
-
+            
+            
 
             client.query(query).then((cordinates) => {
-
                 if (cordinates.rows == 0) {
                     client.end();
                     return callback(null)
