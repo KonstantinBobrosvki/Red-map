@@ -69,6 +69,7 @@ function addPlantsToMap(sender) {
                 markersDictionary[id].push(marker);
                 marker.addTo(map).bindPopup('<b>' + option_select.text() + ' </b> <br> <a href="/plant/' + id + '"> Повече информация. </a>', { autoClose: false });
             });
+            
         },
         error: function () {
             alert("Извенете в момента не можем да ви дадем информация за " + option_select.text() +".");
@@ -79,7 +80,6 @@ function addPlantsToMap(sender) {
 function RandomiseCordinate(cordinate) {
     var lon = (Math.random()/5) * (Math.round(Math.random()) * 2 - 1);
     var lat = (Math.random()/5 ) * (Math.round(Math.random()) * 2 - 1);
-    console.log(lat);
     cordinate.latitude = cordinate.latitude + lat;
     cordinate.longitude = cordinate.longitude + lon;
     return cordinate;
@@ -148,6 +148,7 @@ function removePlantsFromMap(sender) {
     for (i = 0; i < markers.length; i++) {
         map.removeLayer(markers[i]);
     }
+    markersDictionary[id] = null;
 }
 
 
