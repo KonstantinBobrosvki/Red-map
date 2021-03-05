@@ -51,7 +51,8 @@ function addPlantsToMap(sender) {
         contentType: "application/json",
         dataType: 'json',
         success: function (result) {
-            const cordinates = unionClosePoints( result,30);         
+            const cordinates = unionClosePoints(result, 30);   
+
             cordinates.forEach(cordinate => {
                 var greenIcon = L.icon({
                     iconUrl: img_path,
@@ -63,16 +64,25 @@ function addPlantsToMap(sender) {
 
                     popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
                 });
-
+                cordinate = RandomiseCordinate(cordinate);
                 var marker = L.marker([cordinate.latitude, cordinate.longitude], { icon: greenIcon });
                 markersDictionary[id].push(marker);
-                marker.addTo(map).bindPopup('<b>' + option_select.text() + ' </b> <br> <a href="/plant/' + id +'"> Повече информация. </a>', { autoClose: false });//.openPopup();
+                marker.addTo(map).bindPopup('<b>' + option_select.text() + ' </b> <br> <a href="/plant/' + id + '"> Повече информация. </a>', { autoClose: false });
             });
         },
         error: function () {
-            alert("Извенете в момента не можем да ви дадем информация за това растение");
+            alert("Извенете в момента не можем да ви дадем информация за " + option_select.text() +".");
         }
     })
+}
+
+function RandomiseCordinate(cordinate) {
+    var lon = (Math.random()/5) * (Math.round(Math.random()) * 2 - 1);
+    var lat = (Math.random()/5 ) * (Math.round(Math.random()) * 2 - 1);
+    console.log(lat);
+    cordinate.latitude = cordinate.latitude + lat;
+    cordinate.longitude = cordinate.longitude + lon;
+    return cordinate;
 }
 
 function unionClosePoints(cordinates,kilometres) {
