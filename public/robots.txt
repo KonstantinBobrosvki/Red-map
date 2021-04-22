@@ -1,4 +1,4 @@
-User-agent: *
-Allow: /
-
 Sitemap: https://red-map.herokuapp.com/sitemap.xml
+User-agent: *
+Disallow:
+Allow: /
